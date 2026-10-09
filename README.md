@@ -12,13 +12,13 @@ This folder is ready for static hosting (including GitHub Pages).
 - `robots.txt` — allows normal search indexing
 
 ## Deploy to GitHub Pages
-1. Create a repository named `ansleywan.github.io`.
+1. Create a repository named `wanqinting.github.io`.
 2. Upload the **contents of this folder** to the repository root (do not upload the ZIP itself).
 3. In GitHub: Settings → Pages → Deploy from a branch → `main` / root.
-4. The site will be available at `https://ansleywan.github.io` after deployment completes.
+4. The site will be available at `https://wanqinting.github.io` after deployment completes.
 
-## Later, when a custom domain is chosen
-Use Settings → Pages → Custom domain. GitHub will manage/create the `CNAME` file after the domain is configured.
+## Custom domain
+The site is published at `https://qintingwan.com` through GitHub Pages. The repository keeps a `CNAME` file for the custom domain.
 
 ## Before public launch
 - Open the deployed site on desktop and mobile once.
