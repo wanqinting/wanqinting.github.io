@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Qinting Wan — Artificial Intelligence, research, projects, and notes across LLMs, agentic AI, AI for Science, and medical AI.">
+<meta name="theme-color" content="#d6c39c">
+<meta name="color-scheme" content="light only">
+<meta property="og:title" content="Qinting Wan">
+<meta property="og:description" content="Questions, structures, and things still taking shape.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/styles.css">
+<script src="assets/site.js" defer></script>
+<title>Qinting Wan — AI & Research</title>
+</head>
+<body>
+<noscript>
+  <div class="noscript-note">
+    <strong>Qinting Wan</strong>
+    <span>This site uses JavaScript for its interactive entrance. You can still reach me at <a href="mailto:qinting.wan@student.unsw.edu.au">qinting.wan@student.unsw.edu.au</a>.</span>
+  </div>
+</noscript>
+<div id="paper"></div>
+<div id="grain"></div>
+<canvas id="scene" aria-hidden="true"></canvas>
+<div class="point-toast" id="pointToast" aria-live="polite">Point 1 / 8</div>
+
+<section class="entrance" id="entrance" aria-hidden="false">
+  <div></div>
+  <div class="identity" id="identity">
+    <p class="name">Qinting Wan</p>
+    <p class="sub">Research · Projects · Notes</p>
+    <div class="counter" aria-live="polite">
+      <span class="counter-dot"></span>
+      <span id="counterText">0 / 8 points</span>
+    </div>
+    <p class="entry-hint">place eight points · or enter</p>
+    <div class="actions">
+      <button class="action-btn" id="enterBtn" type="button">Enter</button>
+      <button class="action-btn" id="resetBtn" type="button" hidden>Reset</button>
+      <button class="action-btn" id="regenBtn" type="button" hidden>Regenerate</button>
+    </div>
+  </div>
+</section>
+
+<main class="home" id="home" aria-hidden="true" inert>
+  <div class="home-shell">
+    <header class="home-head">
+      <div class="brand">Qinting Wan</div>
+      <a class="contact-jump" href="#contact">Contact</a>
+    </header>
+
+    <section class="hero">
+      <div class="hero-copy">
+        <h1 class="hero-title">
+          <span>Questions, structures,</span>
+          <span>and things still taking shape.</span>
+        </h1>
+        <p class="hero-intro">
+          I’m Qinting Wan, currently studying Artificial Intelligence at UNSW. I’m exploring large language models,
+          agentic AI, AI for Science, and medical AI through projects, experiments, and paper reading, with a particular
+          interest in how intelligent systems can support scientific and healthcare work.
+        </p>
+      </div>
+      <a class="scroll-cue" href="#guideStage" aria-label="Continue to site index">
+        <span aria-hidden="true">↓</span>
+      </a>
+    </section>
+
+    <section class="guide-stage" id="guideStage" aria-label="Site index">
+    <nav class="guide" id="siteGuide" aria-label="Explore this site">
+      <button class="guide-card" type="button" data-section="about" aria-expanded="false" aria-controls="about">
+        <span class="guide-num">01 / About</span>
+        <span class="guide-title">About</span>
+        <span class="guide-desc">Background, direction, and what I’m working toward.</span>
+      </button>
+      <button class="guide-card" type="button" data-section="research" aria-expanded="false" aria-controls="research">
+        <span class="guide-num">02 / Research</span>
+        <span class="guide-title">Research</span>
+        <span class="guide-desc">Questions across LLMs, agentic AI, AI for Science, and medical AI.</span>
+      </button>
+      <button class="guide-card" type="button" data-section="projects" aria-expanded="false" aria-controls="projects">
+        <span class="guide-num">03 / Projects</span>
+        <span class="guide-title">Projects</span>
+        <span class="guide-desc">Systems, prototypes, and experiments I’m building.</span>
+      </button>
+      <button class="guide-card" type="button" data-section="notes" aria-expanded="false" aria-controls="notes">
+        <span class="guide-num">04 / Notes</span>
+        <span class="guide-title">Notes</span>
+        <span class="guide-desc">Paper notes, build logs, and questions still in progress.</span>
+      </button>
+    </nav>
+    </section>
+
+    <section class="expand-section" id="about" aria-hidden="true" inert hidden>
+      <div class="section-reveal">
+        <div class="section-inner">
+          <div class="section-grid">
+            <div class="section-label">About</div>
+            <div class="section-copy about-copy">
+              <h2>About me</h2>
+              <p>
+                I’m Qinting Wan, currently studying Artificial Intelligence at UNSW. My interests are centered around
+                large language models, agentic AI, AI for Science, and medical AI, particularly where intelligent systems
+                can help reason over complex information and address meaningful scientific or healthcare problems.
+              </p>
+              <p>
+                I’m developing my technical and research practice through projects, paper reading, experiments, and
+                independent study. I’m interested not only in how AI systems are built, but in how they can become more
+                capable, reliable, and useful in real-world settings.
+              </p>
+
+              <figure class="about-photo">
+                <img src="assets/profile.jpg" width="1620" height="1080" loading="lazy" decoding="async" fetchpriority="low" alt="Portrait of Qinting Wan outdoors in a mountain landscape">
+              </figure>
+
+              <p class="about-closing">
+                This site is a record of that process — what I’m learning, what I’m building, and the questions I’m still exploring.
+              </p>
+            </div>
+          </div>
+          <button class="back-guide" type="button" data-back-guide><span aria-hidden="true">↑</span> Guide</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="expand-section" id="research" aria-hidden="true" inert hidden>
+      <div class="section-reveal">
+        <div class="section-inner">
+          <div class="section-grid">
+            <div class="section-label">Research</div>
+            <div class="section-copy">
+              <h2>Research interests</h2>
+              <p>
+                I’m interested in intelligent systems that can reason over complex information, use tools, and support
+                scientific or clinical work. My current interests overlap rather than sit in separate boxes.
+              </p>
+              <div class="topic-list">
+                <article class="topic-row">
+                  <div class="topic-index">01</div>
+                  <div>
+                    <h3>LLMs &amp; agentic AI</h3>
+                    <p>Reasoning, tool use, multi-step workflows, evaluation, and the reliability of systems that act rather than only respond.</p>
+                  </div>
+                </article>
+                <article class="topic-row">
+                  <div class="topic-index">02</div>
+                  <div>
+                    <h3>AI for Science</h3>
+                    <p>How AI can help navigate scientific literature, formulate questions, connect evidence, and support experimentation or discovery.</p>
+                  </div>
+                </article>
+                <article class="topic-row">
+                  <div class="topic-index">03</div>
+                  <div>
+                    <h3>Medical AI</h3>
+                    <p>AI systems for clinically meaningful problems, with particular attention to usefulness, evidence, reliability, and real-world constraints.</p>
+                  </div>
+                </article>
+              </div>
+              <p class="section-note">
+                I’m currently building toward these directions through paper reading, reproductions, small experiments,
+                and project work rather than treating any one topic as a finished specialization.
+              </p>
+            </div>
+          </div>
+          <button class="back-guide" type="button" data-back-guide><span aria-hidden="true">↑</span> Guide</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="expand-section" id="projects" aria-hidden="true" inert hidden>
+      <div class="section-reveal">
+        <div class="section-inner">
+          <div class="section-grid">
+            <div class="section-label">Projects</div>
+            <div class="section-copy">
+              <h2>Selected projects</h2>
+              <div class="project-list">
+                <article class="project-row">
+                  <div class="project-meta">In development</div>
+                  <div>
+                    <h3>TaskSnip</h3>
+                    <p>
+                      A minimal browser extension for turning useful parts of AI conversations into focused workspaces:
+                      select a passage, save it in one click, organize it, and export it cleanly.
+                    </p>
+                  </div>
+                </article>
+                <article class="project-row">
+                  <div class="project-meta">Ongoing</div>
+                  <div>
+                    <h3>Generative Personal Site</h3>
+                    <p>
+                      This website. Visitors place eight points, which become a closed, layered geometric structure.
+                      The generated drawing then follows them into the site as a quiet visual trace of the interaction.
+                    </p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+          <button class="back-guide" type="button" data-back-guide><span aria-hidden="true">↑</span> Guide</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="expand-section" id="notes" aria-hidden="true" inert hidden>
+      <div class="section-reveal">
+        <div class="section-inner">
+          <div class="section-grid">
+            <div class="section-label">Notes</div>
+            <div class="section-copy">
+              <h2>Notes &amp; fragments</h2>
+              <p>
+                I use this space for material that is useful before it becomes polished: paper notes, build logs,
+                technical observations, visual experiments, and questions I want to return to.
+              </p>
+              <div class="notes-grid">
+                <div class="note-cell"><span>01</span><strong>Paper notes</strong><p>Ideas, methods, and questions pulled from what I’m reading.</p></div>
+                <div class="note-cell"><span>02</span><strong>Build logs</strong><p>Small records of what worked, what failed, and what changed while building.</p></div>
+                <div class="note-cell"><span>03</span><strong>Open questions</strong><p>Things I don’t yet have a clean answer to, but want to keep visible.</p></div>
+              </div>
+            </div>
+          </div>
+          <button class="back-guide" type="button" data-back-guide><span aria-hidden="true">↑</span> Guide</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-label="Contact">
+      <div class="contact-line">
+        <span class="contact-label">Contact</span>
+        <div class="contact-links">
+          <a class="contact-email" href="mailto:qinting.wan@student.unsw.edu.au">qinting.wan@student.unsw.edu.au</a>
+          <a href="https://github.com/ansleywan" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/qintingwan" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>2026</span>
+    </footer>
+  </div>
+</main>
+</body>
+</html>
