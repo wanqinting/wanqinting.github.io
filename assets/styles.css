@@ -367,6 +367,78 @@ body.home-open #scene{
 }
 .section-note{color:rgba(var(--ink),.76);font-size:14px}
 
+.publication-feature{
+  margin:4px 0 54px;
+  padding:26px 0 30px;
+  border-top:1px solid rgba(var(--ink),.24);
+  border-bottom:1px solid rgba(var(--ink),.18);
+}
+.publication-topline{
+  display:flex;
+  justify-content:space-between;
+  gap:24px;
+  margin-bottom:28px;
+  font-size:10.5px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:rgba(var(--ink),.68);
+}
+.publication-feature h3{
+  max-width:820px;
+  margin:0 0 18px;
+  font-family:var(--serif);
+  font-size:clamp(30px,3.8vw,50px);
+  line-height:1.04;
+  font-weight:400;
+  letter-spacing:-.015em;
+}
+.section-copy .publication-authors{
+  margin-bottom:8px;
+  font-size:14px;
+  line-height:1.6;
+  color:rgba(var(--ink),.83);
+}
+.publication-authors strong{font-weight:500;color:rgba(var(--ink),.96)}
+.section-copy .publication-venue{
+  margin-bottom:24px;
+  font-size:11px;
+  line-height:1.55;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+  color:rgba(var(--ink),.67);
+}
+.section-copy .publication-summary{
+  max-width:800px;
+  margin-bottom:22px;
+  font-size:14px;
+  line-height:1.74;
+  color:rgba(var(--ink),.79);
+}
+.publication-link{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding-bottom:2px;
+  border-bottom:1px solid rgba(var(--ink),.36);
+  color:rgba(var(--ink),.88);
+  font-size:11px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  text-decoration:none;
+}
+.publication-link:hover{border-bottom-color:rgba(var(--ink),.8)}
+.research-interest-head{
+  margin:0 0 34px;
+}
+.research-interest-head h3{
+  margin:0 0 14px;
+  font-family:var(--serif);
+  font-size:clamp(28px,3.2vw,42px);
+  line-height:1.08;
+  font-weight:400;
+}
+.research-interest-head p{margin-bottom:0}
+
 .topic-list,.project-list{
   margin-top:34px;
   border-top:1px solid rgba(var(--ink),.15);
@@ -548,6 +620,11 @@ body.home-open #scene{
     justify-content:flex-start;
   }
   .section-grid{grid-template-columns:1fr;gap:24px}
+  .publication-feature{margin-bottom:44px;padding-top:22px}
+  .publication-topline{display:block;margin-bottom:22px}
+  .publication-topline span{display:block}
+  .publication-topline span+span{margin-top:6px}
+  .publication-feature h3{font-size:clamp(30px,8vw,42px)}
   .topic-row,.project-row{grid-template-columns:1fr;gap:10px}
   .notes-grid{grid-template-columns:1fr}
   .note-cell{min-height:132px}
